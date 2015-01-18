@@ -1,0 +1,1 @@
+Other devices. Show a list of all devices

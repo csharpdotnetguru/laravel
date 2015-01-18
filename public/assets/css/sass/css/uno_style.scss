@@ -1,0 +1,40 @@
+@import "settings";
+@import "text";
+@import "layout";
+@import "button";
+@import "menu";
+@import "image";
+@import "table";
+@import "boxes";
+
+
+@media screen and (max-width: $mobile) {
+  body{
+    padding: 0;
+    margin: 0;
+    max-width:100%;
+    font-size:$fontsize;
+    >table{
+      margin:0 auto !important;
+      width:95% !important;
+    }
+  }
+}
+
+html{
+  height:100%;
+}
+
+body {
+  background-color: white;
+  padding-bottom:200px;
+  display: block;
+  position:absolute;
+  height:auto;
+  bottom:0;
+  top:0;
+  left:0;
+  right:0;
+  margin:0;
+  box-sizing: border-box;
+}

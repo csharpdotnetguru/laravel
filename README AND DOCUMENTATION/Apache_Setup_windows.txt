@@ -1,0 +1,122 @@
+1)
+
+In side the apache directory navigate to 
+******************COPY PASTE ALLOWED************************************
+C:\xampp\apache\conf\extra\httpd-vhosts.conf
+***********************************************************
+
+this is if apache is installed on the same directory. If by anychance it is not then navigate to where 
+it is installed. after you find the xampp/wampp folder everything should be the same
+
+
+**************************************COPY PASTE ALLOWED*****************************************************************
+<VirtualHost unotelly.dev:80>
+    ServerAdmin admin@unotelly.dev
+
+    DocumentRoot "C:\sites\unotelly.dev\public"
+
+    # if php file depends on this value remember to change when going live. 
+    # 99% of the time this won't matter. Only special circumstance where you do a special check		
+    ServerName unotelly.dev
+
+    # allow your browser to find the v host	
+    ServerAlias www.unotelly.dev  
+
+    #log files locations. Laravel handles it's own exception. Not sure the degree logs will be used
+    ErrorLog "logs/unotelly.dev-error.log"
+    CustomLog "logs/unotelly.dev-access.log" combined
+
+	<Directory "C:\sites\unotelly.dev\public">
+		AllowOverride all  #allows htaccess file to override
+		Require all granted  #allows us to access files. default no files allowed
+	</Directory>
+</VirtualHost>
+*******************************************************************************************************
+
+This needs to be added to the bottom of the file
+
+comments can be made inside this file using 
+#comment
+
+use this for added information
+
+2)
+In order to allow windows to navigate to this page navigate to you host file
+inside the host file add the direction to get to the newly created virtual host
+
+you will need to be in administration mode to open the file and save
+*************************COPY PASTE ALLOWED*****************************************
+C:\Windows\System32\Drivers\etc
+************************************************************************************
+
+
+3) 
+After both file are saved restart appache.
+This can be done via the controll panel
+On windows no restart command like linux but you can start and stop the services from running.
+Once service has started and there is no error you can navigate to 
+
+***********************
+http://unotelly.dev
+***********************
+if this works then you are successful in creating the virtual host
+from here on you can use
+******************
+unotelly.dev
+******************
+
+4) If this doesn't work then don't panic yet...
+Navigate to 
+************COPY AND PASTE ALLOWED*************
+C:\xampp\apache\conf
+***********************************************
+there is a file named
+NOTE:most times you can open with out root/admin privillege
+if not then try with admin/root
+****************
+httpd.conf
+****************
+
+look for a line of the file called
+
+*******************************************
+# Virtual hosts
+#Include "conf/extra/httpd-vhosts.conf"
+***********************************************
+
+# Virtual hosts
+NOTE:--------> #Include "conf/extra/httpd-vhosts.conf"
+Notice the comment. Some versions of apache default doesn't allow for v-host.
+uncomment this if it is commented. This will include the v-host file and allow your settings to be configured.
+You can browser this file the see the various settings allowed
+Google any thing you don't understand!!
+*******************************************
+
+5) Create the folder in your file system that you specified as the web root.
+Note: that the root for laravel is the root_folder_of_laravel. 
+But the root folder for the webpage
+is the the root_folder_of_laravel/public
+
+navigate and understand this point.
+
+
+6)THE LAST RESORT
+worst come to worst if you start apache and it doesn't run
+you are allowed a slight raise in heart pace but it's not time to panic yet.
+
+Navigate to 
+***************COPY AND PASTE ALLOWED*******************
+C:\xampp\apache\bin
+*******************************************************
+
+inside there is a fi12:15 PM 2013-06-12le located called
+*****************************************
+httpd.exe
+*****************************************
+This is the execution file of apache do not rename or do anything crazy
+double click it and a black cmd window will open. 
+It will also disappear really quickly. you can solve this problem in two ways
+you can open it from cmd to see the errors 
+or if you have quick reflex you can take a screen shot of the window before it closes.
+Use the print screen button.
+

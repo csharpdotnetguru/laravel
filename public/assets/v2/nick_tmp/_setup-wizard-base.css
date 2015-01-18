@@ -1,0 +1,272 @@
+/* Style Reset */
+
+
+
+
+.row {
+}
+
+.col-sm-12 {
+	margin: 0px;
+	padding: 0px;
+}
+
+.col-sm-6 {
+
+}
+
+.col-sm-4 {
+
+}
+
+h1, h2, h3, h4, h5, p{
+
+}
+
+/*End of Style Reset*/
+
+
+/*Background*/
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.container {
+	background: #ffffff;
+    min-width: 90%;
+    padding-bottom: 0%;
+}
+
+
+.container.one-page {
+/*	background: #ffffff;
+	position:absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    overflow:hidden;
+    z-index:-1;
+    min-width: 90%;*/
+}
+
+
+
+/*End of Background*/
+
+	/*Header*/
+		 .col-sm-12.title  {
+			color: #000000;
+			text-align: center;
+			margin-top: 10px;
+		}
+
+	/*End of Header*/
+
+
+	/*Section*/
+
+		.row.main-section.step2 {
+			padding-bottom: 4%;
+		}
+
+		.center {
+			text-align: center;
+		}
+
+
+		.main-section.row {
+		}
+
+		/*Left Section*/
+		.col-sm-6.left.step1{
+			padding-left: 7%;
+			padding-top: 135px;
+		}
+
+		.col-sm-6.left.step2{
+			padding-left: 15px;
+			padding-top: 50px;
+		}
+
+		.left .col-sm-12.detected-device-text h1 {
+			font-size: 2.2em;
+		}
+
+		.left .col-sm-12.options {
+			padding-top: 20px;
+		}
+
+		.left .col-sm-12.options h3 {
+			font-size: 25px;
+		}
+
+		iframe.youtube {
+			width: 640px;
+			height: 320px;
+		}
+
+
+
+		/*Right Section*/
+/*		.col-sm-6.right {
+			color: white;
+		}*/
+
+		.col-sm-6.right.step2 {
+			padding-left: 30px;
+		}
+
+		.device-logo {
+			/*height: 70%;*/
+			width: auto;
+		}
+
+		.dns-server {
+			background: rgba(0, 0, 0, 0.08);
+			width: 70%;
+			padding: 5px;
+		}
+
+		.col-sm-12.device-dns-server {
+			padding-top: 20px;
+			padding-bottom: 20px;
+		}
+
+	/*End of Section*/
+
+
+
+	/*Footer*/
+			.footer.row {
+
+			}
+
+			.footer.row h4 {
+				font-size: 17px;
+			}
+
+			.col-xs-4.go-back  {
+				padding-left: 5%;
+				/*background-color: blue;
+				color: white;
+				text-align: center;*/
+			}
+			.col-xs-4.questions  {
+				/*background-color: orange;
+				color: white;*/
+				text-align: center;
+			}
+
+			#footer-sticky  {
+			  	position: absolute;
+			 	bottom: 0;
+			  	width: 100%;
+				height: 50px;
+			}
+
+			.col-xs-4.go-back  {
+				/*background-color: blue;
+				color: white;
+				text-align: center;*/
+			}									
+
+	/*End of Footer*/
+
+
+/*Progress bar*/
+
+.col-sm-12.progress-container  {
+	width: 100%;
+
+}
+
+.progress-container .loaded{
+	width: 50%;
+	height: 5px;
+    background: rgba(113, 189, 0, 0.35);
+    float: left;
+	animation:myfirst 5s linear infinite;
+	-moz-animation:myfirst 5s linear infinite; /* Firefox */
+	-webkit-animation:myfirst 5s linear infinite; /* Safari and Chrome */
+	-o-animation:myfirst 5s linear infinite; /* Opera */
+	opacity: 0.50;
+		background-color: purple;
+}
+
+.progress-container .unloaded{
+	width: 50%;
+	height: 5px;
+    background: rgba(0, 0, 0, 0.08);
+    float: right;
+}
+
+
+.progress-container .all-loaded{
+	width: 100%;
+	height: 5px;
+    background: rgba(113, 189, 0, 0.35);
+    float: left;
+	animation:myfirst 5s linear infinite;
+	-moz-animation:myfirst 5s linear infinite; /* Firefox */
+	-webkit-animation:myfirst 5s linear infinite; /* Safari and Chrome */
+	-o-animation:myfirst 5s linear infinite; /* Opera */
+	opacity: 0.50;
+		background-color: purple;
+}
+
+@keyframes myfirst
+{
+0%   {background:#e74c3c;}
+15%  {background:#f1c40f;}
+30%  {background:#2ecc71;}
+45%  {background:#27ae60;}
+60%  {background:#d35400;}
+75% {background:#8e44ad;}
+90% {background:#34495e;}
+100% {background:#9b59b6;}
+
+}
+
+@-moz-keyframes myfirst /* Firefox */
+{
+0%   {background:#e74c3c;}
+15%  {background:#f1c40f;}
+30%  {background:#2ecc71;}
+45%  {background:#27ae60;}
+60%  {background:#d35400;}
+75% {background:#8e44ad;}
+90% {background:#34495e;}
+100% {background:#9b59b6;}
+}
+
+@-webkit-keyframes myfirst /* Safari and Chrome */
+{
+0%   {background:#e74c3c;}
+15%  {background:#f1c40f;}
+30%  {background:#2ecc71;}
+45%  {background:#27ae60;}
+60%  {background:#d35400;}
+75% {background:#8e44ad;}
+90% {background:#34495e;}
+100% {background:#9b59b6;}
+}
+
+@-o-keyframes myfirst /* Opera */
+{
+0%   {background:#e74c3c;}
+15%  {background:#f1c40f;}
+30%  {background:#2ecc71;}
+45%  {background:#27ae60;}
+60%  {background:#d35400;}
+75% {background:#8e44ad;}
+90% {background:#34495e;}
+100% {background:#9b59b6;}
+}
+
+/*End of Progress bar*/
+
+
+
+

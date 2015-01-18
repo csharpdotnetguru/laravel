@@ -1,0 +1,19 @@
+.network_box{
+
+  border:1px solid #d1d1d1;
+  padding:10px;
+  border-radius:5px;
+  overflow-y:auto;
+  >*{
+    max-width:95%;
+  }
+}
+
+
+.inline{
+  *{
+    display:inline-block;
+  }
+
+
+}

@@ -1,0 +1,288 @@
+/*Background*/
+.quickstart {
+    min-height: 100%;
+    background: rgba(255, 255, 255, .97);
+
+    /*padding-top: 5px;*/
+    /*	margin-top: -20px;*/
+    /*	padding-bottom: 80px;*/
+    width: 95%;
+    margin-right: auto;
+    margin-left: auto;
+    -webkit-box-shadow: 6px -1px 35px 0px rgba(0, 0, 0, 0.59);
+    -moz-box-shadow: 6px -1px 35px 0px rgba(0, 0, 0, 0.59);
+    box-shadow: 6px -1px 35px 0px rgba(0, 0, 0, 0.59);
+
+    padding-bottom: 26px;
+}
+
+.page-title.page-header {
+    margin-left: 3%;
+    margin-top: 10px;
+}
+
+a.no-link-style {
+    text-decoration: none;
+    color: #fff;
+}
+
+/*End of Background*/
+
+/*Modal Box*/
+
+.quickstart-modal-top {
+    text-align: center;
+}
+
+div.remodal.quickstart-modal {
+    height: auto;
+    width: 70%;
+    background-color: #ffffff;
+    padding: 25px 25px 25px 25px;
+    text-align: left;
+}
+
+/*end of modal box*/
+
+.hidden {
+    display: none;
+}
+
+/*Top Status Bar*/
+
+#all-success-bar {
+    background-color: green;
+}
+
+#checking-bar {
+    background-color: #e67e22;
+}
+
+#unknown-user-bar {
+    background-color: #D8000C;
+
+}
+
+#account-expired-bar {
+    background: #D8000C;
+}
+
+#no-subscription-bar {
+    background: #D8000C;
+}
+
+#account-suspended-bar {
+    background: #D8000C;
+}
+
+#dns-failed-bar {
+    background: #D8000C;
+}
+
+#dynamo-problem-bar {
+    background-color: #FEEFB3;
+    display: none;
+
+}
+
+.top-status-bar {
+    height: 40px;
+    display: none;
+}
+
+.top-status-bar p {
+    color: #fff;
+    text-align: center;
+    font-size: 1.5em;
+    padding-top: 5px;
+
+}
+
+/*End of Top Status Bar*/
+
+/*Gridster*/
+
+div.gridster {
+}
+
+ul.gridster {
+    list-style: none;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+li.gridster {
+    color: #fff;
+    border: none;
+    opacity: 1;
+    cursor: pointer;
+}
+
+a.wiggle {
+    color: #fff;
+    font-size: 0.8em;
+    text-align: right;
+    padding: 0px;
+    margin: 0px;
+}
+
+h1.tile-title {
+    font-size: 17px;
+    padding-left: 12px;
+    padding-top: 8px;
+    margin-top: 0px;
+    width: 80%;
+}
+
+p.tile-content {
+
+    width: 100%;
+    padding-left: 12px;
+
+}
+
+/*Gridster Tile Icon*/
+
+#tile_account_status.default {
+
+    /*	background: #27ae60 url(../images/icons/Beep-Signal-128.png) 1em 50% no-repeat;
+    */
+    /*	background: #27ae60 url(../images/icons/Check-128.png) center no-repeat;
+    */
+    /*	background: #c0392b url(../images/icons/Wrong-128.png) center no-repeat;
+    */
+
+    /*	#27ae60 url(../images/icons/Check-128.png) right no-repeat;
+    */
+    background: #2c3e50;
+    background-size: 100px;
+}
+
+#tile_account_status.error {
+
+    /*	background: #27ae60 url(../images/icons/Beep-Signal-128.png) 1em 50% no-repeat;
+    */
+    /*	background: #27ae60 url(../images/icons/Check-128.png) center no-repeat;
+    */
+    /*	background: #c0392b url(../images/icons/Wrong-128.png) center no-repeat;
+    */
+
+    /*	#27ae60 url(../images/icons/Check-128.png) right no-repeat;
+    */
+    background: #BF1625 url(../images/icons/Wrong-128.png) right no-repeat;
+    background-size: 100px;
+}
+
+#tile_account_status.warning {
+    background: #F39C11 url(../images/icons/Help-128.png) right no-repeat;
+    background-size: 100px;
+}
+
+#tile_account_status.success {
+
+    /*	background: #27ae60 url(../images/icons/Beep-Signal-128.png) 1em 50% no-repeat;
+    */
+    /*	background: #27ae60 url(../images/icons/Check-128.png) center no-repeat;
+    */
+    /*	background: #c0392b url(../images/icons/Wrong-128.png) center no-repeat;
+    */
+
+    /*	#27ae60 url(../images/icons/Check-128.png) right no-repeat;
+    */
+    background: green url(../images/icons/Check-128.png) right no-repeat;
+    background-size: 100px;
+}
+
+#tile_account_status.good {
+
+    /*	background: #27ae60 url(../images/icons/Beep-Signal-128.png) 1em 50% no-repeat;
+    */
+    /*	background: #27ae60 url(../images/icons/Check-128.png) center no-repeat;
+    */
+    /*	background: #c0392b url(../images/icons/Wrong-128.png) center no-repeat;
+    */
+
+    /*	#27ae60 url(../images/icons/Check-128.png) right no-repeat;
+    */
+    background: #27ae60 url(../images/icons/Check-128.png) right no-repeat;
+    background-size: 100px;
+    display: none;
+}
+
+#tile_dynamo {
+    background: #d35400 url(../images/icons/Spaceship-128.png) center no-repeat;
+}
+
+#tile_update_ip {
+    background: #f39c12 url(../images/icons/Cloud-Recycle-128.png) center no-repeat;
+}
+
+#tile_dyndns {
+    background-color: #7f8c8d;
+    background-size: 100px;
+
+}
+
+#tile_channels {
+    background: #3498db url(../images/icons/Movie-128.png) center no-repeat;
+}
+
+#tile_devices {
+    background: #c0392b url(../images/icons/IPad-128.png) center no-repeat;
+}
+
+#tile_setup_wizard {
+    background: #2c3e50 url(../images/icons/Gear-128.png) center no-repeat;
+}
+
+#tile_help {
+    background: #16a085 url(../images/icons/Help-128.png) center no-repeat;
+    background-size: 100px;
+
+}
+
+#tile_knowledage_base {
+    background: #8e44ad url(../images/icons/BookOpen128.png) center no-repeat;
+    background-size: 100px;
+
+}
+
+#tile_networks {
+    background: #2980b9 url(../images/icons/Network-128.png) center no-repeat;
+    background-size: 100px;
+
+}
+
+#tile_my_account {
+    background: #e67e22 url(../images/icons/Customer-128.png) center no-repeat;
+
+}
+
+#tile_channel_request {
+    background: #e74c3c url(../images/icons/Light-Bulb-128.png) center no-repeat;
+}
+
+#tile_global_servers {
+    background: #5A43BF url(../images/icons/Globe-128.png) center no-repeat;
+}
+
+#tile_android_app {
+    background: #A4C739 url(../images/icons/Android-128.png) center no-repeat;
+}
+
+/*End of Gridster Tile Icon*/
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width: 480px) {
+    div.remodal.quickstart-modal {
+        height: auto;
+        width: 95%;
+        background-color: #ffffff;
+        padding: 25px 25px 25px 25px;
+        text-align: left;
+    }
+
+    #tile_account_status {
+        width: 280px;
+    }
+}

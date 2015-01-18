@@ -1,0 +1,100 @@
+/* Channel Counter */
+
+.channel-counter-banner.container{
+	margin-top: -35px;
+	margin-bottom: -10px;
+	color: #fff;
+	text-align: right;
+}
+
+.channel-counter-banner h1{
+	font-size: 2em;
+}
+
+#channel_count {
+	font-size: 3em;
+}
+/* End of Channel Counter */
+
+
+/* Device Filter Bar*/
+ul.item-filter-buttons {
+	list-style: none;
+	font-size: 20px;
+	/*margin-left: 17%;*/
+
+}
+
+li.item-search-channel {
+    display: inline;
+    margin: 1%;
+    cursor: pointer;
+    padding: 6px;
+}
+
+li.item-filter-buttons {
+	display: inline;
+	margin: 1%;
+	cursor: pointer;
+	padding: 6px;
+}
+
+#item-filter-bar {
+	padding-top: 30px;
+	width: 1000px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+/* End Device Filter */
+
+
+/*==========  Non-Mobile First Method  ==========*/
+
+	/* Large Devices, Wide Screens */
+	@media only screen and (max-width : 1200px) {
+
+	}
+
+	/* Medium Devices, Desktops */
+	@media only screen and (max-width : 992px) {
+
+	}
+
+	/* Small Devices, Tablets */
+	@media only screen and (max-width : 768px) {
+
+	}
+
+	/* Extra Small Devices, Phones */
+	@media only screen and (max-width : 480px) {
+
+		.container {
+			width: 93%;
+		}
+
+
+		#item-filter-bar{
+			width: 320px;
+			padding-top: 5px;
+		}
+	}
+
+	/* Custom, iPhone Retina */
+	@media only screen and (max-width : 320px) {
+		#item-filter-bar{
+			width: 300px;
+			padding-top: 5px;
+		}
+	}
+
+	@media only screen and (max-height : 480px) {
+
+	}
+
+	@media only screen and (max-height : 360px) {
+
+
+	}
+

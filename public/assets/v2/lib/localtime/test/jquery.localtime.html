@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>jQuery Localtime Test Suite</title>
+  <!-- Load local jQuery. This can be overridden with a ?jquery=___ param. -->
+  <script src="../libs/jquery-loader.js"></script>
+  <!-- Load local QUnit. -->
+  <link rel="stylesheet" href="../libs/qunit/qunit.css" media="screen">
+  <script src="../libs/qunit/qunit.js"></script>
+  <!-- Load local lib and tests. -->
+  <script src="../src/jquery.localtime.js"></script>
+  <script src="jquery.localtime_test.js"></script>
+  <!-- Removing access to jQuery and $. But it'll still be available as _$, if
+       you REALLY want to mess around with jQuery in the console. REMEMBER WE
+       ARE TESTING A PLUGIN HERE, THIS HELPS ENSURE BEST PRACTICES. REALLY. -->
+  <script>window._$ = jQuery.noConflict(true);</script>
+</head>
+<body>
+	<h1>IMPORTANT NOTE</h1>
+	These tests may fail if your local PC is not running on Europe/London time
+	<h1 id="qunit-header">jquery.localtime test script</h1>
+	<h2 id="qunit-banner"></h2>
+	<div id="qunit-testrunner-toolbar"></div>
+	<h2 id="qunit-userAgent"></h2>
+	<ol id="qunit-tests"></ol>
+	<div id="qunit-fixture">
+		test markup, will be hidden
+		<span id="testDefaultClassFormat" class="localtime">2011-01-03T13:39Z</span>
+		<span id="testDefaultDataFormat" data-localtime-format>2011-01-03T13:39Z</span>
+		<span id="testNonDefaultClassFormat" class="localtimeNonDefaultFormat">2011-01-03T13:39Z</span>
+		<span id="testNonDefaultDataFormat" data-localtime-format="do MMM yyyy 'at' HH:mm">2011-01-03T13:39Z</span>
+		<div id="outerScope">
+			<!-- Note - no class for jquery at this time to prevent it being modified on page load -->
+			<span id="outerSpanAttribute" class="testScopeAttribute">2011-01-03T13:39Z</span>
+			<span id="outerSpanClass" class="testScopeClass">2011-01-03T13:39Z</span>
+			<div id="innerScope">
+				<span id="innerSpanAttribute" class="testScopeAttribute">2011-01-03T13:39Z</span>
+				<span id="innerSpanClass" class="testScopeClass">2011-01-03T13:39Z</span>
+			</div>
+		</div>
+		<time id="timeTagTestDefault" datetime="2011-01-03T13:39Z" data-localtime-format>Sooner or later 1</time>
+		<time id="timeTagTestNonDefault" datetime="2011-01-03T13:39Z" data-localtime-format="do MMM yyyy h:mmtt">Sooner or later 2</time>
+	</div>
+</body>
+</html>

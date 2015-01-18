@@ -1,0 +1,46 @@
+.container.signin-form {
+  margin-top: 50px;
+  margin-bottom: 180px; }
+
+.form-group.last {
+  margin-bottom: 0px; }
+
+.panel.panel-default.signin-form {
+  opacity: .97; }
+
+.panel-body.signin-form {
+  margin-right: 60px; }
+
+.panel-footer.signin-form {
+  margin-top: 33px; }
+
+.form-group.signin-form {
+  margin-top: 50px; }
+
+.signin-input-container {
+  margin-bottom: 20px; }
+
+.btn-signin-form {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 22px;
+  font-weight: normal; }
+
+.panel-footer.signin-form p.small {
+  margin-top: 10px; }
+
+p.small {
+  font-size: 1em; }
+
+h2.signin {
+  font-size: 1.3em;
+  display: inline; }
+
+h1.signin {
+  display: inline;
+  padding-left: 10px;
+  font-size: 2em; }
+
+.glyphicon.glyphicon-lock.signin-form {
+  font-size: 1.4em; }

@@ -1,0 +1,186 @@
+div.remodal.channel {
+	height: 140%;
+	width: 80%;
+	background-color: #ffffff;
+	padding-left: 25px;
+	padding-right: 15px;
+}
+
+
+/*Header */
+
+p.close-button {
+	margin: 0px;
+	padding: 0px;
+	font-size: 2em;		
+}
+
+div.close-button {
+	float: right;
+}
+
+/*End of Header*/
+
+/*Section Left*/
+img.channel-logo {
+	width: auto;
+}
+
+/*Section Right*/
+.col-sm-6.right.channel-info {
+	text-align: left;
+}
+
+h1.channel-title {
+	margin: 0px;
+}
+
+
+.col-sm-12.channel-text {
+	padding-bottom: 10px;
+
+}
+
+.col-sm-12.channel-dynamo-region {
+	padding-bottom: 10px;
+}
+
+.col-sm-12.channel-tips {
+	padding-bottom: 10px;
+}
+
+/*a:link {
+	color: red;
+}*/
+
+	/*Dynamo List*/
+		.col-sm-12.channel-dynamo-region ul.dynamo  {
+			list-style: none;
+		}
+
+		.col-sm-12.channel-dynamo-region li.dynamo  {
+			display: inline;
+		}
+	/*End of Dynamo List*/
+
+
+
+/*End of section right*/
+
+
+
+/*==========  Non-Mobile First Method  ==========*/
+
+	/* Large Devices, Wide Screens */
+	@media only screen and (max-width : 1200px) {
+
+	}
+
+	/* Medium Devices, Desktops */
+	@media only screen and (max-width : 992px) {
+
+	}
+
+	/* Small Devices, Tablets */
+	@media only screen and (max-width : 768px) {
+
+
+	}
+
+	/* Extra Small Devices, Phones */ 
+	@media only screen and (max-width : 480px) {
+		img.country-flag {
+			width: 16px;
+			height: 16px;
+		}
+
+		div.remodal.channel {
+			height: 240%;
+			width: 100%;
+			padding-left: 25px;
+			padding-right: 15px;
+		}
+
+		h1.channel-title {
+			font-size: 1.5em;
+			margin: 0px;
+			padding: 0px;	
+		}		
+	}
+
+	/* Custom, iPhone Retina */ 
+	@media only screen and (max-width : 320px) {
+
+		img.country-flag {
+			width: 16px;
+			height: 16px;
+		}
+
+		div.remodal.channel {
+			height: 140%;
+			width: 100%;
+			padding-left: 25px;
+			padding-right: 15px;
+		}
+
+		h1.channel-title {
+			font-size: 1.5em;
+			margin: 0px;
+			padding: 0px;	
+		}
+
+	}
+
+
+
+	@media only screen and (max-height : 600px) {
+
+		
+
+	}
+
+	@media only screen and (max-height : 480px) {
+		img.country-flag {
+			width: 16px;
+			height: 16px;
+		}
+
+		div.remodal.channel {
+			height: 180%;
+			width: 100%;
+			padding-left: 25px;
+			padding-right: 15px;
+		}
+
+		h1.channel-title {
+			font-size: 1.5em;
+			margin: 0px;
+			padding: 0px;	
+		}		
+		
+
+	}
+
+	@media only screen and (max-height : 360px) {
+		img.country-flag {
+			width: 16px;
+			height: 16px;
+		}
+
+		div.remodal.channel {
+			height: 180%;
+			width: 100%;
+			padding-left: 25px;
+			padding-right: 15px;
+		}
+
+		h1.channel-title {
+			font-size: 1.5em;
+			margin: 0px;
+			padding: 0px;	
+		}		
+
+	}
+	
+
+

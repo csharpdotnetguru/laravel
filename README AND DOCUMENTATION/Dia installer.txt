@@ -1,0 +1,32 @@
+Dia Program:
+http://dia-installer.de/
+
+Dia Documentation:
+http://dia-installer.de/doc/index.html.en
+
+Dia help:
+https://www.youtube.com/watch?v=FVsvsrzxmnI
+
+Dia Standards:
+
+Redbox
+action is not accessable and doesn't return a view. 
+This action will process information. It can validate information and will likely 
+store to a persistant store such as mysql.
+
+it will return the view that the user should return to on successful or unsuccessful submission of information
+
+
+Blackbox:
+these are regular actions that will render a view.
+These view that are renders will either have information supplied but the action or all information will be present inside the view.
+
+
+BlueBox:
+These are action that should only be accessable by an admin role.
+These will not be accessable from the blackbox's views.
+Authentication is required
+
+
+Notes:
+Double clicking on Dia Box will render additional options

@@ -1,0 +1,32 @@
+1. question
+
+2. choice
+3. answer
+
+
+
+label each question with an id
+q1
+q2
+q3
+q4
+q5
+q6
+q7
+
+assign yes, no, dontknow with a question id
+if clicked, load that question 
+
+
+
+id
+qid
+qname
+yes_skip_qid
+no_skip_qid
+dontknow_skip_qid
+type
+yes-text
+no-text
+dontknow-text
+body-text

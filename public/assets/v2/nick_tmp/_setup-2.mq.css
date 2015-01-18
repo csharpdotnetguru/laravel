@@ -1,0 +1,91 @@
+/*==========  Non-Mobile First Method  ==========*/
+
+	/* Large Devices, Wide Screens */
+	@media only screen and (max-width : 1200px) {
+
+	}
+
+	/* Medium Devices, Desktops */
+	@media only screen and (max-width : 992px) {
+
+	}
+
+	/* Small Devices, Tablets */
+	@media only screen and (max-width : 768px) {
+		.container {
+			width: 85%;
+			position: relative;
+			z-index: 1;
+		}
+
+	}
+
+	/* Extra Small Devices, Phones */ 
+	@media only screen and (max-width : 480px) {
+		.col-sm-6.left.step1 {
+			padding-top: 20%;
+		}
+		.container {
+			width: 95%;
+		}
+
+		.left .col-sm-12.detected-device-text h1 {
+			text-align: center
+		}
+		.left .col-sm-12.options h3 {
+
+			text-align: center
+		}			
+	}
+
+	/* Custom, iPhone Retina */ 
+	@media only screen and (max-width : 320px) {
+
+		.col-sm-6.left.step1 {
+			padding-top: 20%;
+		}
+
+		.container {
+			width: 95%;
+		}
+
+
+		.left .col-sm-12.detected-device-text h1 {
+			font-size: 1.6em;
+			text-align: center
+
+		}
+
+		.left .col-sm-12.options h3 {
+			font-size: 20px;
+			padding-bottom: 10px;
+			text-align: center
+		}			
+	}
+
+	@media only screen and (max-height : 480px) {
+		
+		.container {
+			width: 85%;
+			position: relative;
+			z-index: 1;
+		}
+	}
+
+	@media only screen and (max-height : 360px) {
+		
+		.left .col-sm-12.detected-device-text h1 {
+			font-size: 1.7em;
+		}
+
+		.left .col-sm-12.options {
+			padding-top: 5%;
+		}
+
+		.left .col-sm-12.options h3 {
+			font-size: 1.5em;
+			padding-bottom: 5px;
+			margin: 0px;
+		}	
+	}
+	

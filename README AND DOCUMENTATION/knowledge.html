@@ -1,0 +1,242 @@
+<style>
+info{
+ white-space: pre-wrap;       /* css-3 */
+ white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+ white-space: -pre-wrap;      /* Opera 4-6 */
+ white-space: -o-pre-wrap;    /* Opera 7 */
+ word-wrap: break-word;       /* Internet Explorer 5.5+ */
+}
+blue{
+display:inline-block;
+	background-color:#9cf;
+	color:#135;
+	border-radius:5px;
+	padding:5px;
+	margin:5px;
+}
+</style>
+<info>
+<h1>LavaVel Quick Start</h1>
+
+<h2>Routes</h2>
+This is located in side of the root folder.
+
+Routes can be
+<blue>
+Route::get('/Pref/Update', "PrefController@Update");
+Route::get('/Pref/Delete', "PrefController@Delete");
+
+
+Route::get('/Country', "CountryController@Read");
+Route::get('/Country/Read', "CountryController@Read");
+//note that CountryController must be the name of file the and and the name of the class
+//one class per file as well . do not combine.
+//you can create a parent class for them inorder to group them and abstract classes seems fine as well.
+//must extend BaseController 
+
+
+</blue>
+
+
+<h2>Controller</h2>
+
+Example of a controller with working features
+<blue>
+class CountryController extends StrongController{
+	
+        public function Read(){
+            $data=DB::table('country')->get();
+            return View::make('Country.Read')->with('data',$data);
+			// this creates a view that is then rendered to the page.
+        }
+    
+		public function Submit(){
+			$code=$_POST['country'];
+            country::insert(array("code"=>$code));
+            return Redirect::action('CountryController@Read');
+			//this was a post request. I didn't display anything i just
+			//send to another page after directing.
+		}
+        
+        public function Update(){
+            $data=DB::table('country')->get();
+            return View::make('Country.Update')->with('data',$data);
+			//note that the with is to pass data inside to the view
+        }
+        
+        public function Save(){
+            $code=$_POST['code'];
+            $id=$_POST['id'];
+            
+            $Country=Country::find($id);
+            $Country->code=$code;
+            $Country->save();
+            return Redirect::action('CountryController@Read');
+        }
+	}
+</blue>
+
+<h2>Model</h2>
+To model a class base off a database table
+
+place model inside the models folder. This is located under app models
+The model needs to extend the class eloquent
+
+this allows it to automatically map to a centain database table.
+
+The name of the database table will be the plural form of the class name.
+
+To override this set the property value of table to the name of the table.
+
+you can also set values to be guarded 
+These are the properties that you don't want to be changed in a mass assignment
+
+format
+<blue>
+class User extends Eloquent {
+
+    protected $guarded = array('id', 'password');
+	//doesn't allow fill
+
+}
+
+or
+
+
+class User extends Eloquent {
+
+    protected $fillable = array('first_name', 'last_name', 'email');
+	//allow fill
+
+}
+</blue>
+
+To  update a model you can grab that model as such
+
+<blue>
+$Country=Country::find($id);
+//grab and store a certain model
+
+//model can be updated via
+$Country->code=$code;
+            $Country->save();
+			
+//->code
+//this is the name of the column inside the database. This allow for it to be easily reach and changed.
+//save is needed inorder to store the value back into the database.
+</blue>
+
+
+
+creating a new record is along a similar process. You must first do a new for your eloquent child model to and then apply the needed change.
+
+<h2>View</h2>
+These go inside the <strong>view</strong> folder inside of of the <strong>app</strong> folder.
+<blue>
+	
+</blue>
+
+When naming these you need to make sure that the folder structures is used whenever you call the return View
+
+<h2>Database Migration</h2>
+
+the database need to be created and configured. This is done inside the database class that is located inside app/config/database.php //laravel 4
+
+to install the database go to the root and type
+<blue>
+	php artisan migrate:install
+	
+	php artisan migrate:update
+	//this is to update it
+	//needs to be install before update
+	
+	possible errors:
+	<a href="http://stackoverflow.com/questions/16904470/laravel-4-migrationinstall-errorexception">Install Error</a>
+	
+	//creating tables helpers
+	increments()
+	string()
+	integer()
+	float()
+	boolean()
+	date()
+	timestamp()
+	timestamps()
+	text()
+	blob()
+	//place name of column inside
+</blue>
+
+to make the database you need to be in the root folder
+this needs to be done in side the command line.
+the code is
+<blue>
+php artisan migration:make name_of_migration
+//this will be loaded under app/migration
+
+//filling the tables of the data base
+php artisan migrate
+
+//rollback and other settings
+php artisan migrate:rollback|reset|refresh|refresh --seed
+
+//NOTE: I had a problem with refresh and seed so i migrated and seeded seperately
+php artisan db:seed
+
+</blue>
+
+this needs to be done inside the root folder of containing artisan file
+
+inside the up and down method call <strong>Schema</strong>
+
+<blue>
+//Example of a table creation
+Schema::create('users', function($table) {
+ // auto incremental id (PK)
+$table->increments('id');
+ // varchar 32
+$table->string('username', 32);
+
+$table->string('email', 320);
+
+$table->string('password', 64);
+
+ // int
+$table->integer('role');
+
+ // boolean
+$table->boolean('active');
+
+
+ // created_at | updated_at DATETIME
+$table->timestamps();
+});
+
+</blue>
+<h2>Eloquent</h2>
+//creating relationships
+<blue>
+class DynChannel extends Eloquent{ 
+    public function preference(){
+        return $this->belongsTo('DynChannelAssoc','channel_id');
+        /*
+            search DynchannelAssoc.channel_id with Dynchannel.id
+        */
+    }
+
+}
+    
+</blue>
+
+<h2>Database Methods</h2>
+to migrate and seed the database 
+<blue>
+
+php artisan migrate
+
+php artisan db:seed
+//note the eloquent classes will be needed for this seed to work
+</blue>
+
+
+</info>

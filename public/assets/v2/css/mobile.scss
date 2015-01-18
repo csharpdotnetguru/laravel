@@ -1,0 +1,128 @@
+body {
+    background-repeat: no-repeat !important;
+}
+
+.mobile-content {
+    .section-heading {
+        font-size: 20px !important;
+        font-weight: bold !important;
+    }
+
+    .section {
+        min-height: 440px;
+    }
+
+    .geoBlocks {
+        margin-top: 35px !important;
+        margin-bottom: 0 !important;
+        min-height: 427px !important;
+
+        .geoContent {
+        }
+    }
+
+    #channels {
+        padding-top: 0 !important;
+
+        .channels-list-container {
+            margin-top: 0 !important;
+        }
+
+    }
+
+    #devicesAndPlatforms {
+        height: 460px !important;
+        padding-top: 125px !important;
+
+        .devices-wrapper {
+            .devices-top {
+                top: -100px !important;
+            }
+            .content {
+                top: 0 !important;
+            }
+            .devices-down {
+                bottom: 0 !important;
+            }
+        }
+    }
+
+    #unlimitedAccess, #favoriteChannels, #speed, #map {
+        margin-bottom: 0 !important;
+        padding: 0 10px !important;
+    }
+
+    #onDemand {
+        margin-bottom: 0 !important;
+
+        .row {
+            padding-left: 0 !important;
+        }
+    }
+
+    #pricingPlans {
+        margin-bottom: 0 !important;
+
+        .content {
+            .pricing-container {
+                padding: 0 5px !important;
+                width: 100% !important;
+            }
+            .premium {
+                float: none !important;
+                width: 100% !important;
+                margin-right: 0 !important;
+                text-align: center;
+                margin-bottom: 15px;
+            }
+            .gold {
+                float: none !important;
+                width: 100% !important;
+                text-align: center;
+                img {
+                    display: none !important;
+                }
+            }
+        }
+    }
+
+    #footer {
+        overflow: visible !important;
+
+        .newsletter {
+            height: 100px !important;
+            padding-top: 0 !important;
+        }
+
+        .socialLink {
+            padding: 0 !important;
+
+            .social-list {
+                padding-top: 25px !important;
+                margin-bottom: 25px !important;
+                .socials {
+
+                }
+            }
+            .link-list {
+                .links {
+                    a {
+                        font-size: 14px !important;
+                    }
+                }
+            }
+        }
+        .footerBody {
+            position: static !important;
+            height: 100px !important;
+            margin-bottom: 0 !important;
+            padding-bottom: 0 !important;
+
+            .copyright {
+                float: none !important;
+                line-height: 1.5em;
+            }
+        }
+    }
+
+}

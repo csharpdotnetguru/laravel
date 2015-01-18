@@ -1,0 +1,38 @@
+/*Common Background*/
+
+/*body {
+	background: url(images/london-low-blur.jpg);
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	overflow-y: scroll;
+	margin-bottom: 0px;
+
+}
+
+.bg-overlay {
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	background: transparent url('images/pattern.png') repeat top left;
+	z-index: -1;
+}
+*/
+
+
+	.container.main-content {
+		background: #fff;
+		-webkit-box-shadow: 6px -1px 35px 0px rgba(0,0,0,0.59);
+		-moz-box-shadow: 6px -1px 35px 0px rgba(0,0,0,0.59);
+		box-shadow: 6px -1px 35px 0px rgba(0,0,0,0.59);
+	}
+
+	p.header-small-right {
+		font-size: 15px;
+		padding-top: 15px;
+	}
+
+/*End of Common Background*/

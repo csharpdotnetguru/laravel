@@ -1,0 +1,187 @@
+/*
+    NOTE: it's from desktops => tablets => mobiles since
+    the base frontend design has been implemented that way.
+*/
+
+/* Tablets & small laptops */
+/* width: 1100px and lower */
+@media only screen and (max-width: 1200px) {
+    .main-section-modal-device .video iframe {
+        height: 195px;
+    }
+
+    ul.nav {
+        li {
+            a {
+                padding-left: 10px !important;
+                padding-right: 10px !important;
+            }
+        }
+    }
+
+    .home-heading {
+        font-size: 40px;
+    }
+    .home-description {
+        font-size: 22px;
+    }
+    .section-heading {
+        font-size: 34px;
+    }
+    .section-description {
+        font-size: 15px;
+    }
+    #main {
+        #channels .channels-list-container {
+            max-width: 700px;
+        }
+        #speed .content {
+            padding: 0;
+        }
+        #pressReviews {
+            .content {
+                padding: 0;
+            }
+            .section-heading {
+                margin-top: 75px;
+            }
+        }
+    }
+    .panel-body.signin-form {
+        margin-right: 0 !important;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    ul.nav {
+        li {
+            a {
+                padding-left: 5px !important;
+                padding-right: 5px !important;
+            }
+        }
+    }
+}
+
+/* Smartphones & other small screens */
+/* width: 600px and lower */
+@media only screen and (max-width: 600px) {
+    .main-section-modal-device .video iframe {
+        height: 130px;
+    }
+    .home-heading, .section-heading {
+        font-size: 28px;
+    }
+    .home-description, .section-description {
+        font-size: 18px;
+        font-size: 14px;
+    }
+    #main {
+        .geoBlocks .geoContent .button-container a {
+            margin: 0 0 15px 0;
+        }
+        #favoriteChannels .favorite-channels-list .favorite-channel-list-container {
+            div {
+                padding: 2px;
+            }
+            .name, .company {
+                font-size: 14px;
+            }
+        }
+        #channels .channels-list-container {
+            max-width: 300px;
+        }
+
+        #speed .content, #pressReviews .content {
+            padding: 0;
+        }
+        #speed .competitor {
+            display: none;
+        }
+    }
+    .flow-chart {
+        display: none;
+    }
+    .footerBody {
+        height: 80px !important;
+    }
+    .link-list {
+        .links {
+            a {
+                font-size: 14px !important;
+                padding: 0 !important;
+            }
+        }
+    }
+}
+
+/* Height-related rules */
+/* To adapt content for fullPage.js */
+@media only screen and (max-height: 5000px) {
+    #channels .slider_container {
+        height: 548px;
+        .lists {
+            &:nth-child(1), &:nth-child(2), &:nth-child(3) {
+                display: block;
+            }
+        }
+    }
+    #main {
+        #speed .content, #pressReviews .content {
+            padding: 0;
+        }
+    }
+}
+
+@media only screen and (max-height: 900px) {
+    #channels .slider_container {
+        .lists {
+            &:nth-child(1), &:nth-child(2), &:nth-child(3) {
+                display: block;
+            }
+        }
+    }
+}
+
+@media only screen and (max-height: 880px) {
+    #channels .slider_container {
+        height: 374px;
+        .lists {
+            &:nth-child(1), &:nth-child(2) {
+                display: block;
+            }
+            &:nth-child(3) {
+                display: none;
+            }
+        }
+    }
+}
+
+@media only screen and (max-height: 675px) {
+    .flow-chart {
+        display: none;
+    }
+    #channels .slider_container {
+        height: 192px;
+        .lists {
+            &:nth-child(1) {
+                display: block;
+            }
+            &:nth-child(2), &:nth-child(3) {
+                display: none;
+            }
+        }
+    }
+    .trust {
+        display: none;
+    }
+    #footer {
+        .newsLetter {
+            height: 350px !important;
+            padding-top: 125px !important;
+        }
+        .socialLink {
+            padding-top: 50px;
+        }
+    }
+}

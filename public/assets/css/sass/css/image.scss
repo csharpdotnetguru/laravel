@@ -1,0 +1,69 @@
+@import "settings";
+@import "effects";
+
+.uno_image_gen {
+  position: relative;
+  display: table;
+  margin: 10px;
+  padding: 0;
+  @media screen and (max-width: $mobile) {
+
+    max-width: 100%;
+    img {
+      max-width: 100%;
+      width: 100%;
+    }
+  }
+
+  &.shadow {
+    @include shadow_bottom;
+  }
+
+  &.vignette {
+    box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.9);
+    img {
+      z-index: -1;
+    }
+  }
+
+  &.polaroid {
+    $size: 20px;
+    background-color: white;
+    padding: $size;
+    padding-bottom: $size*3;
+  }
+
+  &.left:not(img) {
+    -webkit-transform: skew(-15deg, 0deg);
+    transform: skew(-15deg, 0deg);
+  }
+
+  &.right:not(img) {
+    -webkit-transform: skew(15deg, 0deg);
+  }
+
+  img {
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    margin: 0 !important;
+    position: relative;
+  }
+
+  &.hover_drop:not(img) {
+    img{
+      z-index:-1;
+    }
+    transition: all 1s linear;
+    &:hover {
+      @include hover_drop;
+    }
+  }
+
+  &.hover_float{
+    transition: all 1s linear;
+    &:hover {
+      @include hover_float;
+    }
+  }
+}

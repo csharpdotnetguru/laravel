@@ -1,0 +1,47 @@
+@import "settings";
+.uno_box{
+  display:block;
+  max-width: 100%;
+  overflow:hidden;
+  vertical-align: top;
+  >*{
+    font-size:0em;
+    box-sizing:border-box;
+    -moz-box-sizing:border-box;
+  }
+  div,span,p,ul,li,table,section,form,input,button{
+    font-size:$fontsize;
+  }
+  .settings{
+    margin:1%;
+    padding:1%;
+  }
+
+  $index:1;
+  $padding:1%;
+  $margin:0.5%;
+  $width:100%/12;
+  @for $i from 1 to 13{
+    .size#{$i}{
+      max-width:($width * $i)-($padding *2) - ($margin *2);
+      display:inline-block;
+      margin-left:$margin;
+      margin-right:$margin;
+      padding:$padding;
+      >*{
+        max-width:100% !important;
+      }
+
+      @media screen and (max-width:$mobile){
+        display:block;
+        width:100%;
+        max-width:100%;
+        margin-left:auto;
+        margin-right: auto;
+        >*{
+          width:100%;
+        }
+      }
+    }
+  }
+}

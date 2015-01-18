@@ -1,0 +1,38 @@
+var unoWizard = {
+	init: function(defaultUnoWizardId) {
+		unoWizard.loadDefault(defaultUnoWizardId);
+		unoWizard.restart(defaultUnoWizardId);
+		unoWizard.goTo();	
+	},
+	loadDefault: function(defaultUnoWizardId) {
+		var currentUnoWizardId = localStorage['currentUnoWizardId'];
+		if( currentUnoWizardId === undefined) {
+			var currentUnoWizardId = defaultUnoWizardId;
+			console.log('no stored question');
+		}		
+		else {
+			console.log('has stored question; restarting from last');
+		}
+		$('div').find('.uno-wizard').hide();
+		$('div[data-uno-wizard-id=' + currentUnoWizardId + ']').fadeIn();
+	},
+	restart: function(defaultUnoWizardId) {
+		$('.restart-uno-wizard').on('click', function() {
+			localStorage.removeItem('currentUnoWizardId');
+			unoWizard.loadDefault(defaultUnoWizardId);
+		});
+	},
+	goTo: function() {
+		$('input[type=radio][name=uno-wizard]').change(function() {
+
+			var unoWizardId = $(this).data('uno-wizard-go-id');
+
+			//Store current wizard id
+			localStorage['currentUnoWizardId'] = unoWizardId;
+
+			$(this).closest('div.uno-wizard').hide();
+			$('div[data-uno-wizard-id=' + unoWizardId + ']').fadeIn();
+
+		});					
+	}
+};

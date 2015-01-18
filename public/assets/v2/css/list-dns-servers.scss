@@ -1,0 +1,41 @@
+.no-space {
+    padding: 0px;
+    margin: 0px;
+}
+
+#dns-world-map {
+    margin-left: auto;
+    margin-right: auto;
+    height: 450px;
+    width: 900px;
+
+    .jvectormap-zoomout {
+        top: 40px;
+    }
+
+    .jvectormap-zoomin,
+    .jvectormap-zoomout {
+        background-color: #EA3535;
+        width: 20px;
+        height: 20px;
+    }
+}
+
+input.dns-value {
+    width: 170px;
+    text-align: center;
+}
+
+table.fastest-servers {
+    width:100%;
+    text-align: center;
+
+    tr {
+        td {
+            &:last-child {
+                text-align: right;
+            }
+
+        }
+    }
+}

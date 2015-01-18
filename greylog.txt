@@ -1,0 +1,7 @@
+https://download.elasticsearch.org/elasticsearch/elasticsearch/elasticsearch-0.90.10.noarch.rpm
+
+java7 open
+
+yum install java-1.7.0-openjdk.x86_64
+
+http://support.torch.sh/help/kb/graylog2-server/installing-graylog2-server-v020x-on-nix-systems

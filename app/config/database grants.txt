@@ -1,0 +1,16 @@
+database grants
+
+
+create user 'support_test'@'localhost' identified by 'support_test';
+
+grant select, insert, update on unotelly_portal.worldcup_2014 TO 'level2_support'@'localhost';
+grant select, insert, update on unotelly_portal.announcements TO 'level2_support'@'localhost';
+grant select, insert, update on unotelly_portal.channel_device_rel TO 'level2_support'@'localhost';
+grant select, insert, update on unotelly_portal.email_templates TO 'level2_support'@'localhost';
+grant select, insert, update on unotelly_portal.ip_ban TO 'level2_support'@'localhost';
+grant select, insert, update on unotelly_portal.list_devices TO 'level2_support'@'localhost';
+grant select, insert, update on unotelly_portal.list_dns_servers TO 'level2_support'@'localhost';
+grant select, insert, update on unotelly_portal.supported_channels TO 'level2_support'@'localhost';
+grant select, insert, update on unotelly_portal.useful_tips_articles TO 'level2_support'@'localhost';
+grant select, insert, update on unotelly_portal.useful_tips_articles_rel TO 'level2_support'@'localhost';
+grant select, insert, update on unotelly_portal.user_testimonials TO 'level2_support'@'localhost';

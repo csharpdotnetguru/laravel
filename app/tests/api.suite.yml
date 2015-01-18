@@ -1,0 +1,24 @@
+class_name: ApiGuy
+modules:
+    enabled: [ApiHelper, REST, Laravel4, PhpBrowser]
+    config:
+           PhpBrowser:
+                url: http://api.unotelly.dev:8000
+           REST:
+                url: http://api.unotelly.dev:8000
+env:
+     staging:
+         modules:
+              config:
+                    REST:
+                        url: 'http://api.staging.staging.unotelly.io:8888'
+     production.staging:
+         modules:
+              config:
+                    REST:
+                        url: 'http://api.production.staging.unotelly.io'
+     production:
+         modules:
+              config:
+                    REST:
+                        url: 'https://api.unotelly.com'

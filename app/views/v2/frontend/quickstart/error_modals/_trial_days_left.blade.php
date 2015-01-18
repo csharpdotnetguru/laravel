@@ -1,0 +1,1 @@
+@if($days_left) {{ $days_left }} days left to your trial. @endif

@@ -1,0 +1,42 @@
+/*Page header*/
+
+.page-title.page-header {
+	margin-left: 4%;
+	margin-top: 10px;
+
+}
+
+
+
+
+/*ENd of page header*/
+
+
+/**/
+
+
+
+/* Device Filter Bar*/
+ul.item-filter-buttons {
+	list-style: none;
+	font-size: 20px;
+	/*margin-left: 17%;*/
+
+}
+
+li.item-filter-buttons {
+	display: inline;
+	margin: 2%;
+	cursor: pointer;
+	padding: 6px;
+}
+
+#item-filter-bar {
+/*	padding-top: 30px;
+	width: 730px;
+	margin-left: auto;
+	margin-right: auto;*/
+}
+
+
+/* End Device Filter 

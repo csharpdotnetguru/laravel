@@ -1,0 +1,60 @@
+<?php
+var_dump($dyn_pref_collec);
+
+foreach($dyn_pref_collec->prefs as $channel_id => $country_id ){
+	echo $channel_id;
+}
+?>
+
+@foreach ($channels_collect as $channel)
+<div data-role='page' id='{{ $channel->code }}'>
+	<div data-role='header'>
+		<a href='#' data-icon='arrow-l' data-iconpos='notext' data-shadow='false' data-iconshadow='false' data-rel='back'>Back</a>
+		<h2>{{ ucfirst($channel->name) }}</h2> 
+	</div>
+
+	<div data-role='content'>
+
+			<ul class='country_list' data-role='listview'>
+
+				@foreach($channel->options as $option)
+				<?php
+
+					// echo "channel_id " . $channel->channel_id;
+					if  (	isset($dyn_pref_collec->prefs[$channel->channel_id]) 
+							&&
+							$dyn_pref_collec->prefs[$channel->channel_id] == $option->country_id
+						)
+					{
+							$user_pref_country_id = $dyn_pref_collec->prefs[$channel->channel_id];
+							// echo "user's pref country_id " . $dyn_pref_collec->prefs[$channel->channel_id];
+							// echo "<br />";
+							// echo $option->country_id;
+							echo "<li data-theme='b'>";
+					}
+					else
+					{
+						echo "<li>";
+					}
+		
+				?>
+				
+					<form id='{{ $channel->channel_id }}-{{ $option->country_id }}' method='POST' action='#'>
+					<input type='hidden' name='uid' value='{{ $user->user_id }}' />
+					<input type='hidden' name='channel_id' value='{{ $channel->channel_id }}'/>
+					<input type='hidden' name='country_id' value='{{ $option->country_id }}' />
+					<input type='hidden' name='user_hash' value='{{ $user_hash }}' />
+
+					</form>
+					<a href="#">
+						<img src='http://quickstart3.unotelly.com/assets/images/flags/{{ $option->country_code}}.png' class='ui-li-icon ui-corner-none ui-li-thumb'>
+						{{ ucfirst($option->country_name) }}
+					</a>
+				</li>
+				@endforeach
+
+			</ul>
+
+	</div>
+</div>
+@endforeach

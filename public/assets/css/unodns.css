@@ -1,0 +1,51 @@
+#all_active {
+    display: none;
+}
+
+
+
+#setup_incomplete {
+    display: none;
+}
+
+
+
+#sub_suspended {
+    display: none;
+}
+#known_user {
+    display: none;
+}
+#no_sub {
+    display: none;
+}
+
+#expired {
+    display: none;
+}
+
+#step1 {
+    float: left;
+    margin: 20px;
+}
+
+#step2 {
+    float: right;
+    margin: 20px 20px 10px 20px;
+}
+
+#progressbar {
+    clear: both;
+    margin: 0px 20px 0px 20px;
+}
+
+
+#btncontinue {
+    margin: 20px 20px 10px 20px;
+    float: right;
+}
+
+#btnback {
+    margin: 20px 20px 10px 20px;
+    float: left;
+}

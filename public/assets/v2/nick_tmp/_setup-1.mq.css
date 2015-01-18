@@ -1,0 +1,138 @@
+/*==========  Non-Mobile First Method  ==========*/
+
+	/* Large Devices, Wide Screens */
+
+	@media only screen and (max-width : 3000px) {
+		.left .col-sm-12.detected-device-text h1 {
+			font-size: 3.3em;
+		}
+		.left .col-sm-12.options {
+			padding-top: 60px;
+		}
+		.left .col-sm-12.options h3 {
+			font-size: 2.5em;
+			padding-bottom: 40px;
+		}
+		.col-sm-6.left.step1 {
+			padding-top: 200px;
+		}
+
+	}
+
+
+	@media only screen and (max-width : 1600px) {
+		.left .col-sm-12.detected-device-text h1 {
+			font-size: 2.5em;
+		}
+		.left .col-sm-12.options {
+			padding-top: 40px;
+		}
+		.left .col-sm-12.options h3 {
+			font-size: 2.2em;
+			padding-bottom: 10px;
+		}
+		.col-sm-6.left.step1 {
+			padding-top: 190px;
+		}
+
+	}
+
+	@media only screen and (max-width : 1200px) {
+		.left .col-sm-12.detected-device-text h1 {
+			font-size: 2.0em;
+		}
+		.left .col-sm-12.options {
+			padding-top: 20px;
+		}
+		.left .col-sm-12.options h3 {
+			font-size: 1.8em;
+			padding-bottom: 10px;
+		}
+		.col-sm-6.left.step1 {
+			padding-top: 150px;
+		}
+
+	}
+
+	/* Medium Devices, Desktops */
+	@media only screen and (max-width : 992px) {
+
+	}
+
+	/* Small Devices, Tablets */
+	@media only screen and (max-width : 768px) {
+		.container {
+			width: 85%;
+		}
+	}
+
+	/* Extra Small Devices, Phones */ 
+	@media only screen and (max-width : 480px) {
+		.col-sm-6.left.step1 {
+			padding-top: 20%;
+		}
+		.container {
+			width: 95%;
+		}
+
+		.left .col-sm-12.detected-device-text h1 {
+			text-align: center
+		}
+		.left .col-sm-12.options h3 {
+
+			text-align: center
+		}			
+	}
+
+	/* Custom, iPhone Retina */ 
+	@media only screen and (max-width : 320px) {
+
+		.col-sm-6.left.step1 {
+			padding-top: 20%;
+		}
+
+		.container {
+			width: 95%;
+		}
+
+
+		.left .col-sm-12.detected-device-text h1 {
+			font-size: 1.6em;
+			text-align: center
+		}
+
+		.left .col-sm-12.options h3 {
+			font-size: 20px;
+			padding-bottom: 10px;
+			text-align: center
+		}			
+	}
+
+	@media only screen and (max-height : 480px) {
+		
+		.col-sm-6.left.step1 {
+			padding-top: 30px;
+		}		
+
+		.left .col-sm-12.options {
+			padding-top: 5%;
+		}		
+	}
+
+	@media only screen and (max-height : 360px) {
+		
+		.left .col-sm-12.detected-device-text h1 {
+			font-size: 1.7em;
+		}
+
+		.left .col-sm-12.options {
+			padding-top: 5%;
+		}
+
+		.left .col-sm-12.options h3 {
+			font-size: 1.5em;
+			padding-bottom: 5px;
+			margin: 0px;
+		}	
+	}
+	

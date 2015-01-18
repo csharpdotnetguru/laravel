@@ -1,0 +1,53 @@
+.uno_table {
+  margin: 10px;
+  border-collapse: collapse;
+  padding: 10px;
+
+  tr {
+    cursor: default;
+    td {
+      text-align: left;
+      vertical-align: top;
+      padding: 10px;
+    }
+  }
+
+  &.light {
+    $color: white;
+    background-color: darken($color, 5%);
+
+    tr {
+      &:nth-of-type(2n) {
+        background-color: darken($color, 10%);
+      }
+      &:hover {
+        background-color: #fffad7;
+      }
+    }
+
+  }
+
+  &.dark {
+    $color: #2f2f2f;
+    color: #cecece;
+    background-color: darken($color, 5%);
+    tr {
+      &:nth-of-type(2n) {
+        background-color: darken($color, 10%);
+      }
+      &:hover {
+        background-color: #504f32;
+      }
+    }
+  }
+
+  &.center {
+    tr {
+      td {
+        text-align: center;
+        vertical-align: middle;
+      }
+    }
+  }
+
+}
